@@ -2,28 +2,33 @@
 	<html>
 		<head>
 			<title>{{ page.title }}</title>
-			<!-- link to main stylesheet -->
 			<link rel="stylesheet" type="text/css" href="/css/main.css">
+			{% if page.custom_css %}
+				{% for stylesheet in page.custom_css %}
+				<link rel="stylesheet" href="/css/{{ stylesheet }}.css">
+				{% endfor %}
+			{% endif %}
+			<script src="https://kit.fontawesome.com/abf67da4f4.js" crossorigin="anonymous"></script>
 		</head>
 		<body>
 			<nav>
 	    		<ul>
 	        		<li><a href="/">Home</a></li>
-		        	<li><a href="/about">About</a></li>
-	        		<li><a href="/cv">CV</a></li>
 	        		<li><a href="/blog">Blog</a></li>
 	    		</ul>
 			</nav>
-			<div class="container">
+			<main class="container">
 			
-			{{ content }}
+				<h1>Hi, my name is Quỳnh</h1>
+				<div class="socials">
+					<p>visit me on</p>
+					<a href="https://www.linkedin.com/in/quynhvng" title="LinkedIn!"><i class="fab fa-linkedin"></i></a>
+					<a href="https://github.com/quynhvng" title="Github!"><i class="fab fa-github-square"></i></a>
+				</div>
 			
-			</div><!-- /.container -->
+			</main><!-- /.container -->
 			<footer>
-	    		<ul>
-	        		<li><a href="mailto:hankquinlanhub@gmail.com">email</a></li>
-	        		<li><a href="https://github.com/hankquinlan">github.com/hankquinlan</a></li>
-				</ul>
+	    	<p>This site is under construction… <i class="fas fa-paint-roller"></i></p>
 			</footer>
 		</body>
 	</html>
