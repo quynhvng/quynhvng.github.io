@@ -1,3 +1,5 @@
 name: quynhvng
 markdown: kramdown
+baseurl: /
+url: https://quynhvng.github.io
 permalink: /blog/:year/:month/:day/:title
