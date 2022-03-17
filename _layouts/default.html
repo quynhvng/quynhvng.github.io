@@ -3,32 +3,30 @@
 		<head>
 			<title>{{ page.title }}</title>
 			<link rel="stylesheet" type="text/css" href="/css/main.css">
-			{% if page.custom_css %}
+			<!--{% if page.custom_css %}
 				{% for stylesheet in page.custom_css %}
 				<link rel="stylesheet" href="/css/{{ stylesheet }}.css">
 				{% endfor %}
-			{% endif %}
+			{% endif %}-->
 			<script src="https://kit.fontawesome.com/abf67da4f4.js" crossorigin="anonymous"></script>
 		</head>
 		<body>
 			<nav>
 	    		<ul>
 	        		<li><a href="/">Home</a></li>
-	        		<li><a href="/blog">Blog</a></li>
+	        		<li><a href="/">About</a></li>
 	    		</ul>
 			</nav>
-			<main class="container">
-			
-				<h1>Hi, my name is Quỳnh</h1>
-				<div class="socials">
-					<p>visit me on</p>
-					<a href="https://www.linkedin.com/in/quynhvng" title="LinkedIn!"><i class="fab fa-linkedin"></i></a>
-					<a href="https://github.com/quynhvng" title="Github!"><i class="fab fa-github-square"></i></a>
-				</div>
-			
-			</main><!-- /.container -->
+			<main>
+				
+				{{ page.content }}
+
+			</main>
 			<footer>
-	    	<p>This site is under construction… <i class="fas fa-paint-roller"></i></p>
+	    	<div class="socials">
+					<a href="https://github.com/quynhvng" title="Github" target="_blank"><i class="fa-brands fa-github"></i></a>
+					<a href="https://www.linkedin.com/in/quynhvng" title="LinkedIn" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+				</div>
 			</footer>
 		</body>
 	</html>
