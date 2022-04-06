@@ -3,32 +3,25 @@
 		<head>
 			<meta charset="utf-8" />
 			<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-			
 			<title>{{ page.title }}</title>
-			<link rel="stylesheet" type="text/css" href="/css/main.css">
-			<!--{% if page.custom_css %}
+			<link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+			{% if page.custom_css %}
 				{% for stylesheet in page.custom_css %}
-				<link rel="stylesheet" href="/css/{{ stylesheet }}.css">
+				<link rel="stylesheet" href="assets/css/{{ stylesheet }}.css">
 				{% endfor %}
-			{% endif %}-->
+			{% endif %}
 			<script src="https://kit.fontawesome.com/abf67da4f4.js" crossorigin="anonymous"></script>
 		</head>
 		<body>
-			<nav>
-	    		<ul>
-	        		<li><a href="/">Home</a></li>
-	        		<li><a href="/">About</a></li>
-	    		</ul>
-			</nav>
+			{% include nav.html %}
 			<main>
-				
 				{{ page.content }}
-
 			</main>
 			<footer>
 	    	<div class="socials">
-					<a href="https://github.com/quynhvng" title="Github" target="_blank"><i class="fa-brands fa-github"></i></a>
-					<a href="https://www.linkedin.com/in/quynhvng" title="LinkedIn" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+					{% for item in site.data.socials %}
+						<a href="{{ item.link }}" title="{{ item.name }}" target="_blank"><i class="fa-brands fa-{{ item.icon }}"></i></a>
+					{% endfor %}
 				</div>
 			</footer>
 		</body>
