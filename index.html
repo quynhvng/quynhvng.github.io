@@ -1,26 +1,17 @@
 ---
 layout: default
 title: quynhvng
+custom_css: home
 ---
 <h1>Hi, my name is Quỳnh</h1>
-<p>if you are interested in visualisations, check out some of mine <i class="fa-solid fa-down-long"></i></p>
-<div class="visual-list">
-	<div class="visual-item">
-		<a href="https://observablehq.com/@quynhvng/vietnam-state-budget-expenditure" target="_blank">
-			<div><img src="https://static.observableusercontent.com/thumbnail/5c03b6f5c14e24c7bbf6a1fbc454de0e4153aed888c450a0016ba237a9c470b0.jpg"></div>
-			Vietnam State Budget Expenditure
+<p>if you are interested in financial data visualisations, check out some of mine <i class="fa-solid fa-down-long"></i></p>
+<div class="thumbnails">
+	{% for item in site.data.main_thumbnails %}
+		<a href="{{ item.link }}" target="_blank">
+			<figure>
+				<img src="/assets/images/main_thumb_{{ item.img_id }}.jpg" alt="thumbnail">
+				<figcaption>{{ item.name }}</figcaption>
+			</figure>
 		</a>
-	</div>
-	<div class="visual-item">
-		<a href="https://observablehq.com/@quynhvng/income-statement-sankey" target="_blank">
-			<div><img src="https://static.observableusercontent.com/thumbnail/9a71147d7166d0cf9a3f9ae26be3986fb87f479f3bd0e4db0f732f153dbac575.jpg"></div>
-			Income Statement Sankey
-		</a>
-	</div>
-	<div class="visual-item">
-		<a href="">
-			<div><img src=""></div>
-			Coming soon…
-		</a>
-	</div>
-</div><!--.visual-list-->
+	{% endfor %}
+</div><!--.thumbnails-->

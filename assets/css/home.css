@@ -1,0 +1,38 @@
+main {
+    text-align: center;
+}
+.thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.thumbnails a {
+    margin-block: 2rem;
+    width: 300px;
+    border: solid 1px #ddd;
+}
+figure {
+    margin: 0;
+    position: relative;
+}
+figure img {
+    width: 100%;
+}   
+figcaption {
+    font-size: 1.8rem;
+    display: none;
+}
+.thumbnails a:hover {
+    border: none;
+    box-shadow: 0 0 5px var(--color1);
+}
+.thumbnails a:hover figcaption {
+    display: block;
+    position: absolute;
+    padding: 1rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--color1);
+    color: white;
+}

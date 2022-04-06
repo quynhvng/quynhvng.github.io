@@ -4,19 +4,18 @@
 			<meta charset="utf-8" />
 			<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 			<title>{{ page.title }}</title>
-			<link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+			<link rel="stylesheet" type="text/css" href="/assets/css/normalize.css">
+			<link rel="stylesheet" type="text/css" href="/assets/css/default.css">
 			{% if page.custom_css %}
 				{% for stylesheet in page.custom_css %}
-				<link rel="stylesheet" href="assets/css/{{ stylesheet }}.css">
+				<link rel="stylesheet" href="/assets/css/{{ stylesheet }}.css">
 				{% endfor %}
 			{% endif %}
 			<script src="https://kit.fontawesome.com/abf67da4f4.js" crossorigin="anonymous"></script>
 		</head>
 		<body>
 			{% include nav.html %}
-			<main>
-				{{ page.content }}
-			</main>
+			<main>{{ content }}</main>
 			<footer>
 	    	<div class="socials">
 					{% for item in site.data.socials %}
