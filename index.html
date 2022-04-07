@@ -9,7 +9,7 @@ custom_css: home
 	{% for item in site.data.main_thumbnails %}
 		<a href="{{ item.link }}" target="_blank">
 			<figure>
-				<img src="/assets/images/main_thumb_{{ item.img_id }}.jpg" alt="thumbnail">
+				<img src="/assets/images/main_thumbnails/{{ item.img_id }}.jpg" alt="thumbnail">
 				<figcaption>{{ item.name }}</figcaption>
 			</figure>
 		</a>
