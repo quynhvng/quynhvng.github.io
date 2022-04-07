@@ -2,12 +2,13 @@ main {
     text-align: center;
 }
 .thumbnails {
+    margin-block: 4rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    row-gap: 2rem;
 }
 .thumbnails a {
-    margin-block: 2rem;
     width: 300px;
     border: solid 1px #ddd;
 }
@@ -23,8 +24,10 @@ figcaption {
     display: none;
 }
 .thumbnails a:hover {
-    border: none;
-    box-shadow: 0 0 5px var(--color1);
+    box-shadow: 0 0 5px #ddd;
+}
+.thumbnails a:hover img {
+    filter: opacity(50%);
 }
 .thumbnails a:hover figcaption {
     display: block;
