@@ -1,0 +1,22 @@
+---
+layout: default
+title: quynhvng | Contact
+custom_css: contact
+---
+<form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mqkndrvk" method="post">
+  <h1>Contact form</h1>
+  <p>Send me an email through this form!</p>
+  <fieldset id="fs-frm-inputs">
+    <label for="full-name">Full Name
+      <input type="text" name="name" id="full-name" placeholder="Your name" required>
+    </label>
+    <label for="email-address">Email Address
+      <input type="email" name="_replyto" id="email-address" placeholder="email@domain.com" required>
+    </label>
+    <label for="message">Message
+      <textarea rows="5" name="message" id="message" placeholder="Your message" required minlength="20"></textarea>
+    </label>
+    <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+  </fieldset>
+  <button type="submit">Send <i class="fa-solid fa-paper-plane"></i></button>
+</form>

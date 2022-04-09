@@ -2,7 +2,7 @@ main {
     text-align: center;
 }
 .thumbnails {
-    margin-block: 4rem;
+    margin-top: 4rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -30,9 +30,9 @@ figcaption {
     filter: opacity(50%);
 }
 .thumbnails a:hover figcaption {
+    padding: 1rem;
     display: block;
     position: absolute;
-    padding: 1rem;
     bottom: 0;
     left: 0;
     right: 0;
