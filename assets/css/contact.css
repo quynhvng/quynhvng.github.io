@@ -13,12 +13,12 @@ label {
   display: flex;
   justify-content: space-between;
 }
-fieldset input, textarea {
+input, textarea {
   max-width: 550px;
   width: 70%;
   padding-inline: 0.5rem;
   margin-left: 3rem;
-  border: 2px solid #ddd;
+  border: 2px solid var(--color-gr2);
   border-radius: 5px;
 }
 @media screen and (max-width: 750px) {
@@ -28,7 +28,7 @@ fieldset input, textarea {
   label {
     flex-direction: column;
   }
-  fieldset input, textarea {
+  input, textarea {
     width: 100%;
     margin-top: 0.5rem;
     margin-left: 0;
@@ -37,20 +37,7 @@ fieldset input, textarea {
 textarea {
   resize: none;
 }
-button {
-  padding-block: 0.75rem;
-  padding-inline: 2rem;
-  border: none;
-  border-radius: 5px;
-  background-color: var(--color1);
-  color: white;
-}
-button:hover {
-  cursor: pointer;
-  background-color: white;
-  color: var(--color1);
-  box-shadow: 0 0 3px 1px var(--color1);
-}
-button:focus {
-  box-shadow: inset 0 0 0 1px white;
+input:focus, textarea:focus {
+  border-color: var(--color1);
+  outline: 1px solid var(--color1);
 }
