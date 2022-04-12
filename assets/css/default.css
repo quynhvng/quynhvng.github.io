@@ -13,11 +13,6 @@
 html {
     font-family: 'Lora', Georgia, serif;
     font-size: 10px;
-    background-color: var(--color-bg);
-    color: var(--color-fg);
-}
-::selection {
-    background-color: var(--color2);
 }
 @media screen and (max-width: 500px) {
     html {
@@ -32,15 +27,28 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: var(--color-bg);
+    color: var(--color-fg);
 }
-nav, footer, h1, .sans-serif {
+::selection {
+    background-color: var(--color2);
+}
+header, footer, h1, .sans-serif {
     font-family: 'Open Sans', Arial, sans-serif;
 }
-nav, footer {
+header, footer {
+    flex: none;
     font-size: 1.6rem;
-    margin-block: 3rem;
+}
+main {
+    flex: auto;
+}
+header {
+    margin-top: 3rem;
+    margin-bottom: 7.5rem;
 }
 footer {
+    margin-block: 3rem;
     padding-top: 1rem;
     display: flex;
     justify-content: end;
@@ -63,7 +71,7 @@ a:hover {
     text-decoration: underline;
     color: var(--color1);
 }
-nav, footer a {
+header, footer a {
     color: var(--color-gr1);
 }
 .socials a {
@@ -85,7 +93,7 @@ nav, footer a {
     cursor: pointer;
     background-color: var(--color-bg);
     color: var(--color1);
-    outline: 2px solid var(--color1);
+    outline: 2px solid currentColor;
 }
 .btn:focus {
     outline: 2px dotted var(--color1);
