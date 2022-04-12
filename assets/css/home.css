@@ -1,4 +1,8 @@
+header {
+    margin-bottom: 3rem;
+}
 main {
+    flex: none;
     text-align: center;
 }
 .thumbnails {
