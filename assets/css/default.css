@@ -73,7 +73,7 @@ a:hover {
     text-decoration: underline;
     color: var(--color1);
 }
-a:focus {
+a:focus-visible {
     outline: 2px solid var(--color1);
 }
 header a, footer a {
@@ -85,20 +85,17 @@ header a, footer a {
 .socials a:hover {
     color: var(--color1);
 }
-.btn {
-    padding-block: 1rem;
-    padding-inline: 2rem;
-    border: none;
-    border-radius: 25px;
-    background-color: var(--color1);
-    color: var(--color-bg);
-  }
-.btn:hover {
+button {
+    padding: 1rem 2rem;
     cursor: pointer;
+    border: 2px solid var(--color-gr2);
+    border-radius: 25px;
     background-color: var(--color-bg);
-    color: var(--color1);
-    outline: 2px solid currentColor;
 }
-.btn:focus {
-    outline: 2px dotted var(--color1);
+button:hover, button:active {
+    border-color: currentColor;
+}
+button:focus-visible {
+    outline: 2px solid var(--color1) !important;
+    outline-offset: 1px;
 }
