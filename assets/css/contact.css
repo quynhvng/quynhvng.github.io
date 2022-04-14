@@ -41,3 +41,12 @@ input:focus, textarea:focus {
   border-color: var(--color1);
   outline: 1px solid var(--color1);
 }
+button {
+  background-color: var(--color1);
+  color: var(--color-bg);
+  border-color: var(--color1);
+}
+button:hover, button:active {
+  background-color: var(--color-bg);
+  color: var(--color1);
+}
