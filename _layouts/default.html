@@ -10,10 +10,14 @@
 			<link rel="manifest" href="/assets/images/favicon/site.webmanifest">
 			<link rel="stylesheet" type="text/css" href="/assets/css/normalize.css">
 			<link rel="stylesheet" type="text/css" href="/assets/css/default.css">
-			<link rel="stylesheet" type="text/css" href="/assets/css/fontawesome.css">
 			{% if page.custom_css %}
 				{% for stylesheet in page.custom_css %}
 				<link rel="stylesheet" href="/assets/css/{{ stylesheet }}.css">
+				{% endfor %}
+			{% endif %}
+			{% if page.scripts %}
+				{% for script in page.scripts %}
+				<script src="{{ script }}" defer></script>
 				{% endfor %}
 			{% endif %}
 		</head>
@@ -25,14 +29,9 @@
 			<footer>
 	    	<div class="socials">
 					{% for item in site.data.socials %}
-						<a href="{{ item.link }}" title="{{ item.name }}" target="_blank"><i class="fab">&#x{{ item.icon }};</i></a>
+						<a href="{{ item.link }}" title="{{ item.name }}"><i class="fab">&#x{{ item.icon }};</i></a>
 					{% endfor %}
 				</div>
-			</footer>
-			{% if page.scripts %}
-				{% for script in page.scripts %}
-				<script src="/assets/scripts/{{ script }}.js" type="text/javascript"></script>
-				{% endfor %}
-			{% endif %}
+			</footer>			
 		</body>
 	</html>

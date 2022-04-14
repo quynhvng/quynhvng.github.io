@@ -1,9 +1,12 @@
 name: quynhvng
-markdown: kramdown
 
 baseurl: /
 url: https://quynhvng.github.io
 permalink: /blog/:year/:month/:day/:title
+
+markdown: kramdown
+plugins:
+  - jekyll-sitemap
 
 collections_dir: collections
 collections:

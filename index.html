@@ -7,9 +7,9 @@ custom_css: home
 <p>If you are interested in financial data visualisations, check out some of mine <i class="fas">&#xf309;</i></p>
 <div class="thumbnails">
 	{% for item in site.data.main_thumbnails %}
-		<a href="{{ item.link }}" target="_blank">
+		<a href="{{ item.link }}" target="_blank" rel="noreferrer">
 			<figure>
-				<img src="/assets/images/main_thumbnails/{{ item.img_id }}.jpg" alt="thumbnail">
+				<img src="/assets/images/main_thumbnails/{{ item.img_id }}.webp" alt="thumbnail">
 				<figcaption>{{ item.name }}</figcaption>
 			</figure>
 		</a>
