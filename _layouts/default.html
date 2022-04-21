@@ -8,23 +8,18 @@
 			<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
 			<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
 			<link rel="manifest" href="/assets/images/favicon/site.webmanifest">
-			<link rel="stylesheet" type="text/css" href="/assets/css/normalize.css">
-			<link rel="stylesheet" type="text/css" href="/assets/css/default.css">
-			{% if page.custom_css %}
-				{% for stylesheet in page.custom_css %}
-				<link rel="stylesheet" href="/assets/css/{{ stylesheet }}.css">
-				{% endfor %}
-			{% endif %}
-			{% if page.scripts %}
-				{% for script in page.scripts %}
-				<script src="{{ script }}" defer></script>
-				{% endfor %}
-			{% endif %}
+			<link rel="stylesheet" href="/assets/css/normalize.css">
+			<link rel="stylesheet" href="/assets/css/default.css">
+			{% if page.layout != "default" %}<link rel="stylesheet" href="/assets/css/{{ page.layout }}.css">{% endif %}
+			{% if page.custom_css %}{% for stylesheet in page.custom_css %}
+			<link rel="stylesheet" href="/assets/css/{{ stylesheet }}.css">
+			{% endfor %}{% endif %}
+			{% if page.scripts %}{% for script in page.scripts %}
+			<script src="{{ script }}" defer></script>
+			{% endfor %}{% endif %}
 		</head>
 		<body>
-			<header>
-				{% include nav.html %}
-			</header>
+			<header>{% include nav.html %}</header>
 			<main>{{ content }}</main>
 			<footer>
 	    	<div class="socials">
