@@ -3,10 +3,7 @@ layout: default
 ---
 <header class="article-header">
   <h1>{{ page.title }}</h1>
-  <div class="meta">
-    <div><i class="fas">&#xf783</i> {{ page.date | date: "%Y–%m–%d" }}</div>
-    <div><i class="fas">&#xf02c</i> {{ page.tags | join: ', ' }}</div>
-  </div>
+  <p class="tags"># {{ page.tags | join: ', ' }}</p>
 </header>
 <div class="content">
   {{ content }}
