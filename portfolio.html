@@ -9,8 +9,8 @@ scripts: [https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js,
 <h1>My work samples</h1>
 <div id="works">
   <div class="filter-tags">
-    Filter by categories:
-    <button type="button" class="filter-clear">Clear filters</button>
+    Filter by tags:
+    <button type="button" class="filter-clear">View all</button>
     {% assign tags =  site.portfolio | map: 'tags' | join: ','  | split: ',' | uniq | sort %}
     {% for tag in tags %}
       <button type="button" class="filter-tag" data-filter="{{ tag }}">{{ tag }}</button>
@@ -20,7 +20,7 @@ scripts: [https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js,
     {% for work in site.portfolio %}
       <li class="item">
         <a href="{{ work.url }}">
-          <h2 class="title">{{ work.title }}</h2>
+          <p class="title">{{ work.title }}</p>
           <p class="subtitle">{{ work.subtitle }}</p>
           <p class="date">{{ work.date | date: "%Y–%m–%d" }}</p>
           <p class="tags" style="display: none;">{{ work.tags }}</p>
