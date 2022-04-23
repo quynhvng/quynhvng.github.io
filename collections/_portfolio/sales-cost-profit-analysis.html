@@ -1,0 +1,27 @@
+---
+layout: portfolio-item
+title: Sales, Cost, and Gross Profit Analysis
+subtitle: Analysing a company's operating results using pivot tables. Case design by "Accounting is Analytics".
+date: 2022-04-23
+tags: [managerial accounting, spreadsheet]
+---
+<p>This is one of the cases designed by professors at "Accounting is Analytics" to integrate analytics into their accounting classes.
+  You can <a href="https://accountingisanalytics.com/2019/12/31/cac-ma/">view full details of the case here</a>.
+</p>
+<h2>Case summary</h2>
+<p>This case uses the sales data of a fictitious furniture retail company, which has over 49,000 records and spans four years. The case requires you to use pivot tables to analyse trends, outline best or worst performers among sales items, and produce an operating result report.</p>
+<h2>Output</h2>
+<p>While calculating the company's sales results, I found that neither Google Sheet's arrayformula nor function auto-fill does well with large datasets. Therefore, I wrote a short Apps Script to perform the task instead. The script took the same time to run. However, as it wrote calculated values as raw numbers, the sheet was less sluggish. Google Sheet's pivot table also did not do well with datasets this large. As of the time, for reporting purposes, I think businesses are better off using Excel or management systems rather than Google Sheets.</p>
+<div class="embedding">
+  <div class="iframe-wrapper">
+    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTXdhv9QUFob4luWMkO2_BaYAQ95fk2gR3mM5Km57-RWN7lCuA-DR5_kXTZB0hgQRkvEjbjLaUVgYRP/pubhtml?widget=true&amp;headers=false"></iframe>
+    title="Embedded Google Sheet" loading="lazy"></iframe>
+  </div>
+  <aside>Functions used include pivot table, transpose, arrayformula, and Apps Script custom formula.
+    <a href="https://docs.google.com/spreadsheets/d/1juel3U5O2MjaTcC9yJvVStRdmnVyLjhNUkPgW5KrULg/edit?usp=sharing" target="_blank"
+      rel="noreferrer noopener">Link to full spreadsheet.</a>
+  </aside>
+</div>
+<p>Through the "Sales revenue by region" chart, we can tell at a glance that domestic sales made up the majority of the company's revenue. All regions had approximately the same growth rate, except the Midwest region, which was more volatile but boasted the best result in more recent quarters. We can also see that the company's products had no seasonal fluctuation.</p>
+<p>Among the two brands of products sold by the company, "Jeffrey Alexander" had better contribution margins. Its collections consistently had better contribution margin ratios than "Elements"'s. Both brands had one line of product that was making a loss just by being sold. However, management should determine whether these products are "loss leaders" before removing them.</p>
+<p>The profit margins varied between regions, the South being the worst performer. As this region was in the red even before accounting for company-wise fixed costs, management should consider dropping it. With more data and vertical analysis, management would be able to make better restructuring decisions for the remaining regions.</p>
