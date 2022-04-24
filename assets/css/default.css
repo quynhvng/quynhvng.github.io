@@ -7,18 +7,11 @@
     --color1: #1976D2;
     --color2: #FFAB9130;
 }
-* {
-    box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 html {
     line-height: 1.25;
     font-family: 'Lora', Georgia, serif;
     font-size: 10px;
-}
-@media screen and (max-width: 500px) {
-    html {
-        font-size: 8.75px;
-    }
 }
 body {
     font-size: 2rem;
@@ -27,7 +20,6 @@ body {
     margin-inline: auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     background-color: var(--color-bg);
     color: var(--color-fg);
 }
@@ -38,16 +30,19 @@ body {
     font-family: 'Open Sans', Arial, sans-serif;
 }
 .page-header, footer {
-    flex: none;
     font-size: 1.6rem;
     cursor: default;
 }
+.page-header {
+    width: 100%;
+    padding: 3rem 12.5%;
+    position: fixed; z-index: 1; left: 0;
+    display: flex;
+    background-color: var(--color-bg);
+}
 main {
     flex: auto;
-}
-.page-header {
-    margin-top: 3rem;
-    margin-bottom: 7.5rem;
+    margin-top: 12rem;
 }
 footer {
     margin-block: 3rem;
@@ -60,10 +55,8 @@ nav ul {
     padding: 0;
     margin-block: 0;
     list-style: none;
-}
-nav ul li {
-    margin-right: 2.5rem;
-    display: inline;
+    display: flex;
+    gap: 2rem;
 }
 a {
     outline: none;
@@ -76,15 +69,6 @@ a:hover {
 }
 a:focus-visible {
     outline: 2px solid var(--color1);
-}
-.page-header a, footer a {
-    color: var(--color-gr1);
-}
-.socials a {
-    padding-inline: 0.5rem;
-}
-.socials a:hover {
-    color: var(--color1);
 }
 button {
     padding: 1rem 2rem;
@@ -99,6 +83,40 @@ button:hover, button:active {
 button:focus-visible {
     outline: 2px solid var(--color1) !important;
     outline-offset: 1px;
+}
+.page-header a, footer a {
+    color: var(--color-gr1);
+}
+.nav-btn-close, .nav-btn-open {
+    font-size: 2rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 0;
+    display: none;
+}
+.socials a {
+    padding-inline: 0.5rem;
+}
+.socials a:hover {
+    color: var(--color1);
+}
+@media screen and (max-width: 500px) {
+    html { font-size: 9px; }
+    body { width: 80%; }
+    .page-header { padding: 3rem 10%;}
+    .head-nav {
+        display: flex;
+        align-items: flex-start;
+    }
+    .head-nav ul {
+        margin-top: 1rem; margin-left: 3rem;
+        flex-direction: column;
+        display: none; 
+    }
+    .head-nav .nav-btn-open { display: block; }
+    .head-nav.open ul { display: flex; }
+    .head-nav.open .nav-btn-open { display: none; }
+    .head-nav.open .nav-btn-close { display: block; }
 }
 /*!
  * Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com

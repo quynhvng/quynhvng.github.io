@@ -1,4 +1,6 @@
-<nav>
+<nav class="head-nav">
+  <button type="button" class="nav-btn-open"><i class="fas">&#xf0c9;</i></button>
+	<button type="button" class="nav-btn-close"><i class="fas">&#xf00d;</i></button>
   <ul>
     {% for item in site.data.nav %}
       <li><a href="{{ item.link }}">{{ item.name }}</a></li>
