@@ -9,17 +9,19 @@
 			<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
 			<link rel="manifest" href="/assets/images/favicon/site.webmanifest">
 			<link rel="stylesheet" href="/assets/css/normalize.css">
-			<link rel="stylesheet" href="/assets/css/default.css">
-			{% if page.layout != "default" %}<link rel="stylesheet" href="/assets/css/{{ page.layout }}.css">{% endif %}
+			<link rel="stylesheet" href="/assets/css/{{ page.layout }}.css">
 			{% if page.custom_css %}{% for stylesheet in page.custom_css %}
 			<link rel="stylesheet" href="/assets/css/{{ stylesheet }}.css">
 			{% endfor %}{% endif %}
+			<script src="/assets/scripts/nav.js" defer></script>
 			{% if page.scripts %}{% for script in page.scripts %}
 			<script src="{{ script }}" defer></script>
 			{% endfor %}{% endif %}
 		</head>
 		<body>
-			<header class="page-header">{% include nav.html %}</header>
+			<header class="page-header">
+				{% include nav.html %}
+			</header>
 			<main>{{ content }}</main>
 			<footer>
 	    	<div class="socials">

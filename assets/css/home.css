@@ -1,12 +1,12 @@
-footer {
-    margin-top: 7.5rem;
-}
 main {
-    flex: none;
+    margin-top: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
 }
 .thumbnails {
-    margin-top: 4rem;
+    margin-block: 2rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
