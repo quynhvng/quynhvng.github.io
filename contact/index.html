@@ -5,8 +5,8 @@ custom_css: contact
 ---
 <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mqkndrvk" method="post">
   <h1>Contact form</h1>
-  <p>Send me an email through this form!</p>
-  <fieldset id="fs-frm-inputs">
+  <p>Send me an email!</p>
+  <div id="fs-frm-inputs">
     <label for="full-name">Full Name
       <input type="text" name="name" id="full-name" placeholder="Your name" required>
     </label>
@@ -17,6 +17,6 @@ custom_css: contact
       <textarea rows="5" name="message" id="message" placeholder="Your message" required minlength="20"></textarea>
     </label>
     <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
-  </fieldset>
-  <button type="submit">Send <i class="fas">&#xf1d8;</i></button>
+  </div>
+  <button id="fs-frm-submit" type="submit">Send <i class="fas">&#xf1d8;</i></button>
 </form>
