@@ -11,7 +11,7 @@ scripts: [https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js,
   <div class="filter-tags">
     Filter by tags:
     <button type="button" class="filter-clear">View all</button>
-    {% assign tags =  site.portfolio | map: 'tags' | join: ','  | split: ',' | uniq | sort %}
+    {% assign tags =  site.portfolio | map: 'tags' | uniq | sort %}
     {% for tag in tags %}
       <button type="button" class="filter-tag" data-filter="{{ tag }}">{{ tag }}</button>
     {% endfor %}

@@ -10,7 +10,7 @@
 			<link rel="manifest" href="/assets/images/favicon/site.webmanifest">
 			<link rel="stylesheet" href="/assets/css/normalize.css">
 			<link rel="stylesheet" href="/assets/css/default.css">
-			{% if page.layout != "default" %}<link rel="stylesheet" href="/assets/css/{{ page.layout }}.css">{% end if %}
+			{% if page.layout != "default" %}<link rel="stylesheet" href="/assets/css/{{ page.layout }}.css">{% endif %}
 			{% if page.custom_css %}{% for stylesheet in page.custom_css %}
 			<link rel="stylesheet" href="/assets/css/{{ stylesheet }}.css">
 			{% endfor %}{% endif %}
