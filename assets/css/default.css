@@ -84,6 +84,14 @@ button:focus-visible {
     outline: 2px solid var(--color1) !important;
     outline-offset: 1px;
 }
+figure img {
+  width: 100%;
+}
+figcaption {
+  text-align: center;
+  font-size: smaller;
+  font-style: italic;
+}
 .page-header a, footer a {
     color: var(--color-gr1);
 }
