@@ -1,5 +1,5 @@
 main {
-    margin-top: 8rem;
+    margin-bottom: 4rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -20,11 +20,8 @@ figure {
     margin: 0;
     position: relative;
 }
-figure img {
-    width: 100%;
-}   
 figcaption {
-    font-size: 1.8rem;
+    font-style: normal;
     display: none;
 }
 .thumbnails a:hover {
