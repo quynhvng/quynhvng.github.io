@@ -70,17 +70,18 @@ a:hover {
 a:focus-visible {
     outline: 2px solid var(--color1);
 }
-button {
+button, .btn {
     padding: 1rem 2rem;
     cursor: pointer;
     border: 2px solid var(--color-gr2);
     border-radius: 25px;
     background-color: var(--color-bg);
 }
-button:hover, button:active {
+button:hover, button:active, .btn:hover, .btn:active {
     border-color: currentColor;
+    text-decoration: none;
 }
-button:focus-visible {
+button:focus-visible, .btn:focus-visible {
     outline: 2px solid var(--color1) !important;
     outline-offset: 1px;
 }
