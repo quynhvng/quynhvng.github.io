@@ -1,0 +1,47 @@
+---
+layout: portfolio-item
+title: Data and Analytics in Auditing
+subtitle: Integrating data and analytics into the auditing process using Python and Streamlit. Case design by KPMG.
+date: 2022-04-25
+tags: [auditing, streamlit, python]
+---
+<p>In collaboration with KPMG professionals, Allen D. Blay (Florida State University) and Jay C. Thibodeau (Bentley University) developed this case study to integrate data analytics into financial statement auditing lectures. You can {% include link.html href="https://www.kpmguniversityconnection.com/University/view/curriculum/?module_id=148" text="view full details of the case here" %}.</p>
+<h2>Case summary</h2>
+<p>In this case study, we partake in the auditing process of a fictitious company: Urgent Medical Device, Inc. The company specialises in the development and manufacturing of medical devices. Currently, Urgent is developing a new sales channel for its latest premier product. The case's requirements focus on testing sales revenue and accounts receivable using the data Urgent provided.</p>
+<h3>The database</h3>
+<p>The provided database features over 1,100 transactions and six datasets: (1) Sales Orders, (2) Customer Invoices, (3) Shipments, (4) Products, (5) Sales Territory, and (6) Customer Master (information on customers—in this case, comprising only distributors).</p>
+<figure>
+  <img src="/assets/images/portfolio_case_audit_database.webp" alt="Diagram of database provided by Urgent">
+  <figcaption>Diagram of database provided by Urgent</figcaption>
+</figure>
+<h3>The requirements</h3>
+<p>In general, our tasks include:</p>
+<ul>
+  <li>Identify fraud risk factors;</li>
+  <li>Reconcile the provided database with the trial balance before testing;</li>
+  <li>Perform substantive tests using data analytics and visualisation tools.</li>
+</ul>
+<h2>Results and discussion</h2>
+<h3>Fraud risk factors</h3>
+<div class="aside-container">
+  <p>Based on the case information, I identified the following fraud risks:</p>
+  <ul>
+    <li>The need to report strong sales to raise a significant amount of new investment capital to fund the strategy;</li>
+    <li>Short-term performance incentive compensation based on revenue earned;</li>
+    <li>Almost unreachable sales targets;</li>
+    <li>A culture of aggressive management style that emphasises speed and efficiency;</li>
+    <li>Past disagreements between management and the audit team.</li>
+  </ul>
+  <aside>{% include link.html href="https://pcaobus.org/oversight/standards/auditing-standards/details/AS2401#appendix" text="Examples of fraud risk factors from PCAOB (US)" %}, categorised according to the {% include link.html href="https://www.fraud-magazine.com/article.aspx?id=4294983342" text="fraud triangle" %}.</aside>
+</div>
+<p>Disagreements are unavoidable and may affect the cooperation between two parties in this engagement. However, other risk factors potentially incentivise management or employee to falsify sales records. Among these factors, fund requirements and short-term incentives compensation concern personal interest and present significant risks. In terms of "what can go wrong" with relevant assertions, these factors may facilitate:</p>
+<ul>
+  <li>Recording of fictitious sales order;</li>
+  <li>Revenue recognition of undelivered orders;</li>
+  <li>Fabricated customer accounts;</li>
+  <li>Not writing off aged receivables.</li>
+</ul>
+<h3>Subtantive testing</h3>
+<p>This case study encourages working with datasets using data and analytics software such as IDEA and Tableau. These are proprietary software and can be costly. I opted for Python and Streamlit instead, which are more customisable, scalable, and open-source.</p>
+{% include link.html href="https://share.streamlit.io/quynhvng/casestudy-urgent-medical/script.py" text="Open the data analytics report app" class="btn"%}
+<p>Through commonly used analyses, I was able to identify some suspicious accounts and activities. For example, the West region was at high risk of material misstatements, displaying unprecedented sales growth, missing records, and receivable accounts exceeding credit limits. However, forming an audit opinion requires more compelling evidence. These can be obtained by performing additional procedures such as confirmation of accounts receivable, verification of records with supporting documents, etc.</p>

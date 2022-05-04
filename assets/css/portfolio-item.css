@@ -11,7 +11,7 @@
 .content {
   width: 75%;
 }
-.embedding {
+.aside-container {
   position: relative;
 }
 .iframe-wrapper {
@@ -33,6 +33,10 @@ aside {
   font-size: smaller;
   color: var(--color-gr1);
   border-left: 2px solid var(--color-gr2);
+}
+a.btn {
+  display: block;
+  text-align: center;
 }
 @media screen and (max-width: 1000px) {
   .content {
